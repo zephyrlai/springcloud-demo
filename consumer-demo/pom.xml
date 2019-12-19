@@ -6,7 +6,6 @@
 		<groupId>cn.zephyr</groupId>
 		<artifactId>springcloud-demo</artifactId>
 		<version>1.0-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>cn.zephyr</groupId>
 	<artifactId>consumer-demo</artifactId>
