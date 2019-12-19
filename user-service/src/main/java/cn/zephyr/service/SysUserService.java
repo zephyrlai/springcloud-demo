@@ -25,6 +25,13 @@ public class SysUserService {
      * @return
      */
     public SysUser selectById(Integer id){
+        if(id==2){
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         return this.sysUserMapper.selectByPrimaryKey(id);
     }
 }
