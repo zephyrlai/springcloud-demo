@@ -20,6 +20,7 @@
         <module>eureka-server</module>
         <module>user-service</module>
         <module>consumer-demo</module>
+        <module>consumer-feign-demo-9020</module>
     </modules>
 
     <properties>
