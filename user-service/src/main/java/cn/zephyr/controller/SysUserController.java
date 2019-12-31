@@ -2,10 +2,7 @@ package cn.zephyr.controller;
 
 import cn.zephyr.entity.SysUser;
 import cn.zephyr.service.SysUserService;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -30,5 +27,21 @@ public class SysUserController {
     public SysUser selectById(@PathVariable Integer id){
         System.err.println(request.getRequestURL());
         return sysUserService.selectById(id);
+    }
+
+    @RequestMapping("selectById4Get")
+    public SysUser selectById4Get(@RequestParam("id") Integer id){
+        System.err.println(request.getRequestURL());
+        return sysUserService.selectById(id);
+    }
+
+    @RequestMapping("query4Get")
+    public SysUser query4Get(@RequestBody SysUser sysUser){
+        return sysUserService.query4Get(sysUser);
+    }
+
+    @PostMapping("save")
+    public Integer save(@RequestBody SysUser sysUser){
+        return sysUserService.save(sysUser);
     }
 }

@@ -27,4 +27,13 @@ public class SysUserService {
     public SysUser selectById(Integer id){
         return this.sysUserMapper.selectByPrimaryKey(id);
     }
+
+    public SysUser query4Get(SysUser sysUser){
+        return this.sysUserMapper.select(sysUser).get(0);
+    }
+
+    public Integer save(SysUser sysUser){
+        return this.sysUserMapper.insert(sysUser);
+
+    }
 }

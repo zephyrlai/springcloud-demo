@@ -2,8 +2,7 @@ package cn.zephyr.service;
 
 import cn.zephyr.entity.SysUser;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @ClassName: FeignSysUserService
@@ -16,4 +15,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface FeignSysUserService {
     @RequestMapping("/selectById/{id}")
     SysUser selectById(@PathVariable Integer id);
+
+    @RequestMapping("/selectById4Get")
+    SysUser selectById4Get(@RequestParam("id") Integer id);
+
+    @RequestMapping("/query4Get")
+    SysUser query4Get(@RequestBody SysUser sysUser);
+
+    @PostMapping("/save")
+    Boolean save(SysUser sysUser);
 }
