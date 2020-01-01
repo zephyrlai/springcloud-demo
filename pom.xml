@@ -21,6 +21,7 @@
         <module>user-service</module>
         <module>consumer-demo</module>
         <module>consumer-feign-demo-9020</module>
+        <module>consumer-hystrix-feign-demo-9021</module>
     </modules>
 
     <properties>
