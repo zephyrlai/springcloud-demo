@@ -29,6 +29,7 @@ public class SysUserController {
     @RequestMapping("selectById/{id}")
     public SysUser selectById(@PathVariable Integer id){
         System.err.println(request.getRequestURL());
-        return sysUserService.selectById(id);
+        SysUser sysUser = sysUserService.selectById(id);
+        return sysUser;
     }
 }

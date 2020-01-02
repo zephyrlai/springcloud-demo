@@ -22,7 +22,7 @@ public class SysUserController {
 
     @RequestMapping("selectById")
     public SysUser selectById(Integer id) {
-        String url = "http://user-service/sysUser/selectById?id=" + id;
+        String url = "http://user-service/sysUser/selectById/" + id;
         return restTemplate.getForObject(url, SysUser.class);
     }
 

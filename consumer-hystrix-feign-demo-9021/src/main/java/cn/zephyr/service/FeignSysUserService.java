@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
  * @Date: 2019/12/31 21:07
  */
 //@FeignClient(value="user-service",fallbackFactory = FeignSysUserServiceFallbackFactory.class)
-@FeignClient(value="user-service",fallbackFactory = CommonFallbackFactory.class)
+@FeignClient(value="user-service"/*,fallbackFactory = CommonFallbackFactory.class*/)
 @RequestMapping("/sysUser")
 public interface FeignSysUserService {
     @RequestMapping("/selectById/{id}")
